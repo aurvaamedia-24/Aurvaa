@@ -795,4 +795,8 @@ html {
   transform: translateY(-3px);
   box-shadow: 0 12px 28px rgba(13,32,68,0.15);
 }
-
+.c-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
