@@ -158,6 +158,7 @@ function highlightCenterCard() {
 
 setInterval(highlightCenterCard, 120);
 // form redirect script
+// ── CONTACT FORM POPUP SUBMIT
 const form = document.getElementById("contact-form");
 
 if (form) {
@@ -175,9 +176,14 @@ if (form) {
     });
 
     if (response.ok) {
-      window.location.href = "thankyou.html";
+      document.getElementById("successPopup").classList.add("active");
+      form.reset();
     } else {
       alert("Oops! Something went wrong. Please try again.");
     }
   });
+}
+
+function closePopup() {
+  document.getElementById("successPopup").classList.remove("active");
 }

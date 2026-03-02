@@ -800,3 +800,88 @@ html {
   height: 32px;
   object-fit: contain;
 }
+
+/* ===== Luxury Success Popup ===== */
+
+.success-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+
+.success-popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-content {
+  background: linear-gradient(145deg, #0d2044, #132b5e);
+  padding: 50px;
+  border-radius: 20px;
+  max-width: 500px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
+.success-popup.active .popup-content {
+  transform: translateY(0);
+}
+
+.popup-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.popup-highlight {
+  color: #25D366;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.popup-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.popup-btn {
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.whatsapp-btn {
+  background: #25D366;
+  color: #fff;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(37,211,102,0.4);
+}
+
+.close-btn {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.close-btn:hover {
+  background: #fff;
+  color: #0d2044;
+}
