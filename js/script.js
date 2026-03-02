@@ -157,3 +157,27 @@ function highlightCenterCard() {
 }
 
 setInterval(highlightCenterCard, 120);
+// form redirect script
+const form = document.getElementById("contact-form");
+
+if (form) {
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      window.location.href = "thankyou.html";
+    } else {
+      alert("Oops! Something went wrong. Please try again.");
+    }
+  });
+}
