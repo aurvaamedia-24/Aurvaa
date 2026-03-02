@@ -187,3 +187,14 @@ if (form) {
 function closePopup() {
   document.getElementById("successPopup").classList.remove("active");
 }
+
+// Close popup when clicking outside content
+const popup = document.getElementById("successPopup");
+
+if (popup) {
+  popup.addEventListener("click", function(e) {
+    if (e.target.id === "successPopup") {
+      closePopup();
+    }
+  });
+}
