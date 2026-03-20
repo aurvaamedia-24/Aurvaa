@@ -927,3 +927,12 @@ html {
     transform: scale(1) translateY(0);
   }
 }
+
+.social-icons a {
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
